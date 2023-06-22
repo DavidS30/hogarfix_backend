@@ -10,6 +10,8 @@ class Profile(models.Model):
     phone_number = models.CharField(max_length=50, default='')
     id_status = models.BooleanField(default=True)
     date_created = models.DateTimeField(default=timezone.now)
+    image = models.ImageField(upload_to='profile/', null=True, blank=True)
+    rating = models.IntegerField(default=5)
 
     #
     def __str__(self):
